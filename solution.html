@@ -1,0 +1,157 @@
+Skip to content
+Search or jump to…
+Pulls
+Issues
+Marketplace
+Explore
+ 
+@leehwayeonn 
+kongukjae
+/
+web-A-lecture
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+More
+web-A-lecture/[24] layout-training/20220127-layout-training-1.html
+@kongukjae
+kongukjae 2022-01-27 강의 예제
+Latest commit 9677e64 17 hours ago
+ History
+ 1 contributor
+116 lines (102 sloc)  3 KB
+   
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+
+    #container {
+      width: 100vw;
+      height: max-content;
+      background-color: #333;
+      transition: 2s;
+    }
+
+    /* common */
+    #container section {
+      width: inherit;
+      height: 50vh;
+      /* border: 1px solid #fff; */
+
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ddd;
+    }
+
+    #container section>div {
+      width: 20vw;
+      height: 20vw;
+      /* background-color: #ddd; */
+      /* border: 1px solid salmon; */
+      /* transition:2s; */
+
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+
+
+    #container section div:nth-child(2) div {
+      width: 3vw;
+      height: 3vw;
+      border-radius: 1.5vw;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <script>
+      const container = document.querySelector('#container');
+      for (let i = 0; i < 10; i++) {
+        const itemSection =
+          `
+        <section class="section-number-${i + 1}">
+          <div class="first-child">1</div>
+          <div>
+            <div class="dot"></div>
+          </div>
+          <div>3</div>
+        </section>    
+        `;
+        container.innerHTML += itemSection;
+      }
+      const sectionItems = document.querySelectorAll('#container section');
+      for (let i = 0; i < sectionItems.length; i++) {
+        sectionItems[i].firstElementChild.style.visibility = "hidden";
+        sectionItems[i].lastElementChild.style.visibility = "hidden";
+        sectionItems[i].lastElementChild.style.position = "relative";
+        sectionItems[i].lastElementChild.style.left = "5vw";
+      }
+      let status = true;
+      container.addEventListener('click', function (event) {
+        if (status === true) {
+          if (event.target.classList.contains('dot')) {
+            event.target.style.transform = "scale(2, 2)";
+            event.target.style.transition = "0.5s";
+            event.target.style.backgroundColor = "#fff";
+            status = false;
+            this.style.backgroundColor = "#000";
+            event.target.parentElement.nextElementSibling.style.visibility = "visible";
+            event.target.parentElement.nextElementSibling.textContent = "hello";
+            event.target.parentElement.nextElementSibling.style.fontSize = "2rem";
+          }
+        } else {
+          if (event.target.classList.contains('dot')) {
+            event.target.style.transform = "scale(1, 1)";
+            event.target.parentElement.nextElementSibling.style.visibility = "hidden";
+            this.style.backgroundColor = "#333";
+            status = true;
+          } 
+        }
+      });
+    </script>
+  </div>
+</body>
+
+</html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

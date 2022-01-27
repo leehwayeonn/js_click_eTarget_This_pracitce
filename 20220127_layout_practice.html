@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      overflow-x: hidden;
+    }
+    section {
+      width: 100vw;
+      height: 100vh;
+      padding: 100px;
+      box-sizing: border-box;
+      
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+
+
+    /*  section 1*/
+      /* 왼쪽영역 */
+    section#page01 #wrapMainContent {
+      width: 50vw;
+    }
+    section#page01 #wrapMainContent #containerTop{
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    section#page01 #wrapMainContent #containerTop h1 {
+      /* width: max-content;
+      height: 100px; */
+      border: 1px solid #ccc;
+
+      font-size: 2rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section#page01 #wrapMainContent #containerTop #box{
+      /* width: 10vw;
+      height: 10vh; */
+      border: 1px solid #ccc;
+
+      text-align: center;
+      line-height: 10ch;
+    }  
+    section#page01 #wrapMainContent #containerDown p {
+      /* width: 100%; */
+      
+      display: block;
+      border: 1px solid #ccc;
+
+      font-size: 16px;
+
+      margin-top: 7vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+
+      /* section 1 오른쪽영역 */
+    section#page01 #menu {
+      width: 200px;
+      height: 100%;
+      margin-left: 2vw;
+      /* border: 1px solid #ccc; */
+
+      /* text-indent: -9999em; */
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    section#page01 #menu > div {
+      width: 30px;
+      height: 30px;
+      background-color: #ddd;
+      border-radius: 50%;
+      margin: 20px;
+    }
+    section#page01 #menu > div .content {
+      width: 100px;
+      height: 30px;
+
+      text-align: center;
+
+      border-right: 5px solid orange;
+      border-bottom: 1px solid orange;
+
+      position: relative;
+      left: -120px;
+    }
+
+
+
+
+
+
+    /* section2 */
+    #page02 {
+      justify-content: start;
+    }
+     
+    /* section2 왼쪽영역 */
+    section#page02 #leftBox {
+      width: 10vw;
+      height: 100%;
+      /* border: 1px solid #ccc; */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section#page02 #leftBox #box_gray{
+      width: 2.5vw;
+      height: 80vh;
+      background-color: #ddd;
+    }
+
+
+    /* section2 오른쪽영역 */
+    section#page02 #image {
+      width: 65vw;
+      height: 50vh;
+      /* border: 1px solid #ccc; */
+
+      text-indent: -9999em;
+
+      background: url(./images/flower.jpg) 50% 50% /cover;
+    }
+
+    section#page02 #textBox {
+      width: 800px;
+      height: 200px;
+      /* border: 1px solid #ccc; */
+    }
+    section#page02 #textBox h2 {
+      font-size: 2rem;
+      padding-left:1.5vw ;
+      margin-top: 4vh;
+    }
+    section#page02 #textBox p{
+      width: 65vw;
+      margin-top: 0.5vh;
+      padding: .8vw;
+    }
+  </style>
+</head>
+<body>
+  <section id="page01">
+    <div id="wrapMainContent">
+      <div id="containerTop">
+        <h1 class="bg">Loram Ipsum</h1>
+        <div id="box"class="bg">box</div>
+      </div>
+      <div id="containerDown">
+        <p class="bg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam molestiae expedita rem ut officia illum veritatis maiores iure accusantium, doloremque aliquid minus, impedit consectetur enim magnam modi, dolore debitis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam molestiae expedita rem ut officia illum veritatis maiores iure accusantium, doloremque aliquid minus, impedit consectetur enim magnam modi, dolore debitis!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam molestiae expedita rem ut officia illum veritatis maiores iure accusantium, doloremque aliquid minus, impedit consectetur enim magnam modi, dolore debitis!</p>
+      </div>
+    </div>
+    <div id ="menu">
+      <div class="circle">
+        <div class="content">event target</div>
+      </div>
+      <div class="circle">
+        <div class="content">event target</div>
+      </div>
+      <div class="circle">
+        <div class="content">event target</div>
+      </div>
+      <div class="circle">
+        <div class="content">event target</div>
+      </div>
+    </div>
+  </section>
+  <section id="page02">
+    <div>
+      <div id="leftBox">
+        <div id="box_gray"></div>
+      </div>
+    </div>
+    <div>
+      <div id="image">image</div>
+      <div id="textBox">
+        <h2>title</h2>
+        <div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam molestiae expedita rem ut officia illum veritatis maiores iure accusantium, doloremque aliquid minus, impedit consectetur enim magnam modi, dolore debitis!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam molestiae expedita rem ut officia illum veritatis maiores iure accusantium, doloremque aliquid minus, impedit consectetur enim magnam modi, dolore debitis!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laboriosam molestiae expedita rem ut officia illum veritatis maiores iure accusantium, doloremque aliquid minus, impedit consectetur enim magnam modi, dolore debitis!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script>
+    const wrapMainContent = document.querySelector("#wrapMainContent");
+    const box = document.querySelector("#box");
+    const loramipsum =document.querySelector("#containerTop h1");
+    const pBox = document.querySelector("#containerDown p") ;
+    console.dir(box);
+    
+    
+    let boxWidth = 10;
+    let boxHeight = 10;
+    box.style.width = boxWidth+"vw"
+    box.style.height = boxHeight+"vw"
+
+
+    loramipsum.style.width = boxWidth*2 +"vw";
+    loramipsum.style.height = boxWidth +"vw";
+    pBox.style.width = boxWidth*5+ "vw";
+
+    // let value = true;
+    // wrapMainContent.addEventListener('click', function(e){
+    //   if(value === true && e.target.classList.contains("bg")) {   
+    //     e.target.style.backgroundColor = "green";
+    //     value = false;
+    //   } else {
+    //     if(value === false && e.target.classList.contains("bg")){
+    //     e.target.style.backgroundColor = "#fff";
+    //     value = true;
+    //     }
+    //   }
+    // });
+
+    loramipsum.style.backgroundColor = '#fff';
+    box.style.backgroundColor = '#fff';
+    pBox.style.backgroundColor = '#fff';
+    console.log(loramipsum.style.backgroundColor);
+    wrapMainContent.addEventListener('click', function(e){
+      if(e.target.style.backgroundColor ==="rgb(255, 255, 255)") {   
+        e.target.style.backgroundColor = "green";
+      } else {
+        if(e.target.style.backgroundColor==="green"){
+        e.target.style.backgroundColor = "rgb(255, 255, 255)";
+        }
+      }
+    });
+
+    // 색을 조건문에 조건으로 넣어주려면 rgb를 사용하거나 색이름을 black, green 처럼
+    // 넣어주어야 인식한다.
+    // 실행문에는 #ccc 같은 색을 넣어주어도 된다. 
+    // 바뀌는 것을 넣어주면 추가적인 조건 value 값이나 클리스가 동일하지 않아도 되는거 아닐까?
+    // 되네 되네 이렇게 하면 된다. !
+    // ★★★★그치만 초기값을 자바스크립트 안에 넣어주어야만 인식을 한다 ★★★★
+
+
+
+
+
+
+
+    //event target 연습하기
+    const menu = document.querySelector("#menu");
+    const circle = document.querySelectorAll("#menu .circle");
+    const content = document.querySelectorAll('#menu div .content');
+    
+    // for(let i=0; i<circle.length; i++){
+    //   circle[i].addEventListener("click", function(){
+    //     circle[i].style.backgroundColor ="orange";
+    //     content[i].style.backgroundColor ="#eee";
+    //   });     
+    // }
+    
+    // let status =true;
+    // menu.addEventListener("click", function(e){
+    //   if(status === true){
+    //     if(e.target.classList.contains('circle')){
+    //       e.target.style.backgroundColor ="orange";
+    //       status = false;
+    //       e.target.children[0].style.borderColor ="#ddd";
+    //       e.target.children[0].style.color ="blue";
+    //     } 
+    //   } else {
+    //     if(status === false){
+    //       if(e.target.classList.contains('circle')){
+    //         e.target.style.backgroundColor ="#ddd";
+    //         status = true;
+    //         e.target.children[0].style.borderColor ="orange";
+    //         e.target.children[0].style.color ="#000";
+    //       }
+    //     }
+    //   }
+    // }); 
+
+    let status =true;
+    menu.addEventListener("click", function(e){
+      
+        if(e.target.classList.contains('circle')&&status === true){
+          e.target.style.backgroundColor ="orange";
+          status = false;
+          e.target.children[0].style.borderColor ="#ddd";
+          e.target.children[0].style.color ="blue";
+        } 
+       else {
+          if(e.target.classList.contains('circle')&&status === false){
+            e.target.style.backgroundColor ="#ddd";
+            status = true;
+            e.target.children[0].style.borderColor ="orange";
+            e.target.children[0].style.color ="#000";
+          }
+        }
+      
+    }); 
+
+    // 일단 클레스로 지정해주지 않으면 자식들에 손자들까지 모두 적용범위가 됨
+    // = 는 되는데 === 은 안됨. 왜이럼??
+    // else문도 실행이 안됨... 왜 안되는지 모르겠음
+    // menu.addEventListener("click", function(e){
+    //     if(e.target.style.backgroundColor ="#ddd"){
+    //       e.target.style.backgroundColor ="orange";
+    //       e.target.children[0].style.borderColor ="#ccc";
+    //       e.target.children[0].style.color ="blue";
+    //     } else{
+    //       if(e.target.style.backgroundColor !=="#ddd"){
+    //       e.target.style.backgroundColor ="#ddd";
+    //       e.target.children[0].style.borderColor ="orange";
+    //       e.target.children[0].style.color ="#000";
+    //       }
+    //     }
+        
+    // });     
+
+    // for(let i=0; i<circle.length; i++){
+    //   circle[i].addEventListener("click", function(){
+    //     this.style.backgroundColor ="orange";
+    //     this.children[0].style.backgroundColor ="#eee";
+    //     this.children[0].style.color ="red";
+    //     console.dir(this.children[0]);
+    //   });     
+    // }
+  </script>
+</body>
+</html>
